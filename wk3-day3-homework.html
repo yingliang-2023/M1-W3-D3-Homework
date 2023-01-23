@@ -69,10 +69,59 @@
   });
 
   /* Preview this page on the browser and test the first calculation */
-
+  
   /* Now it's your turn to do the rest as seen on the preview */
 
   /* WRITE YOUR HOMEWORK SCRIPTS BELOW HERE */
+  
+  //Half Number
+  function halfNumber(num){
+    var halfNumber=num*0.5;
+    document.getElementById("solution").innerHTML = 'The result of half of the number ' + num + ' is ' + halfNumber;
+   }
+  
+  var halfButton = document.getElementById("half-button");
+  halfButton.addEventListener("click", function() {
+    var num = document.getElementById("half-input").value;
+    halfNumber(num);
+  });
+
+  // Fraction
+function percentNumber(frac,whole){
+    var percent=frac/whole*100;
+    document.getElementById("solution").innerHTML = frac + " is " +percent+"% of "+whole;
+   }
+  
+  var percentButton = document.getElementById("percent-button");
+  percentButton.addEventListener("click", function() {
+    var frac = document.getElementById("percent1-input").value;
+    var whole = document.getElementById("percent2-input").value;
+    percentNumber(frac,whole);
+  });
+
+//Interger
+ function intNumber(num){
+    var intNumber=Math.round(num);
+    document.getElementById("solution").innerHTML = 'The neareast whole number of' + num + ' is ' + intNumber;
+   }
+  
+  var intButton = document.getElementById("int-button");
+  intButton.addEventListener("click", function() {
+    var num = document.getElementById("int-input").value;
+    intNumber(num);
+  });
+
+//Area
+function area(num){
+    var area=num*num*Math.PI;
+    document.getElementById("solution").innerHTML = 'The area of circle with radius ' + num + ' is ' + area;
+   }
+  
+  var areaButton = document.getElementById("area-button");
+  areaButton.addEventListener("click", function() {
+    var num = document.getElementById("area-input").value;
+    area(num);
+  });
 
 
 </script>
